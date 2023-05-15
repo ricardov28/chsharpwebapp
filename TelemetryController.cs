@@ -1,3 +1,6 @@
+//  file that contains the logic for handling HTTP requests related to telemetry data. 
+// It defines methods such as Index that return views to be displayed in the user's browser.
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using System.Collections.Generic;
