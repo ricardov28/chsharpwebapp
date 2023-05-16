@@ -23,7 +23,7 @@ namespace YourNamespace
         public async Task<IActionResult> Index()
         {
             // Fetch telemetry data from all connected clients via the hub
-            var telemetryData = await _hubContext.Clients.All.SendAsync("GetTelemetryData");
+            List<TelemetryModel> telemetryData = (List<TelemetryModel>)await _hubContext.Clients.All.SendCoreAsync("GetTelemetryData", new object[] { });
 
             // Create a list to store telemetry data models
             List<TelemetryModel> telemetryList = new List<TelemetryModel>();
